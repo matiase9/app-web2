@@ -1,0 +1,46 @@
+version: "3.6"
+services:
+  client:
+    build:
+      context: ./client/
+    container_name: client
+    volumes:
+      - ./client/:/usr/src/app:delegated
+    ports:
+     - 3000:3000
+    # environment:
+    #   - NODE_ENV=development
+    #   - CHOKIDAR_USEPOLLING=true
+    #   - REACT_APP_API_URL=${REACT_APP_API_URL}
+    # depends_on:
+    #   - node
+    links:
+            - server
+    networks:
+            - webappnetwork
+
+  server:
+    build: ./server/
+    container_name: server
+    depends_on:
+      - mongo
+    ports:
+      - 4000:4000
+    volumes:
+    #   - ./server/:/usr/src/app
+       
+       - ./server/:/usr/src/app:delegated
+    networks:
+            - webappnetwork
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+          - webappnetwork
+
+  
+networks:
+    webappnetwork:
+        driver: bridge
+

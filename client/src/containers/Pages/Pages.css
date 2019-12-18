@@ -1,0 +1,34 @@
+.menu {
+    background: #b2b2c3;
+    width: 100%;
+    background-repeat: no-repeat, repeat;
+    background-position: center; 
+    background-size: cover;
+    box-shadow: 2px 2px 5px #f8f9fa;
+    z-index: 999999;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.menu a:hover,
+.menu a:active {
+    color: #b2b2c3;
+}
