@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/matiase9/test-api#readme",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "core-util-is": "^1.0.2",
     "download": "^7.1.0",
